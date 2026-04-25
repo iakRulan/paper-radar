@@ -1,0 +1,17 @@
+# arXiv API
+arxiv>=2.1.0
+
+# LLM 客户端
+openai>=1.30.0
+
+# 配置文件解析
+pyyaml>=6.0
+
+# HTTP 请求（推送通知等）
+requests>=2.31.0
+
+# 时间解析
+python-dateutil>=2.8.0
+
+# 工具
+feedparser>=6.0.0

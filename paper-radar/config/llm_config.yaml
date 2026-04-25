@@ -1,0 +1,65 @@
+# LLM 接口配置
+# 支持多种 LLM 提供商，通过修改 active_provider 切换
+
+# 当前使用的提供商
+active_provider: deepseek
+
+# 提供商配置
+providers:
+  deepseek:
+    name: DeepSeek
+    base_url: https://api.deepseek.com/v1
+    api_key_env: DEEPSEEK_API_KEY
+    default_model: deepseek-chat
+    available_models:
+      - deepseek-chat
+      - deepseek-reasoner
+
+  openai:
+    name: OpenAI
+    base_url: https://api.openai.com/v1
+    api_key_env: OPENAI_API_KEY
+    default_model: gpt-4o-mini
+    available_models:
+      - gpt-4o
+      - gpt-4o-mini
+      - o1-mini
+
+  claude:
+    name: Anthropic Claude
+    base_url: https://api.anthropic.com/v1
+    api_key_env: ANTHROPIC_API_KEY
+    default_model: claude-3-5-sonnet-20241022
+    available_models:
+      - claude-3-5-sonnet-20241022
+      - claude-3-5-haiku-20241022
+
+  siliconflow:
+    name: SiliconFlow
+    base_url: https://api.siliconflow.cn/v1
+    api_key_env: SILICONFLOW_API_KEY
+    default_model: deepseek-ai/DeepSeek-V3
+    available_models:
+      - deepseek-ai/DeepSeek-V3
+      - deepseek-ai/DeepSeek-R1
+      - Qwen/Qwen2.5-72B-Instruct
+
+  custom:
+    name: Custom/OpenAI-compatible
+    base_url: ${CUSTOM_BASE_URL}
+    api_key_env: CUSTOM_API_KEY
+    default_model: ${CUSTOM_MODEL}
+    available_models: []
+
+# 生成参数
+generation:
+  relevance:
+    temperature: 0.2
+    max_tokens: 256
+    response_format: json_object
+  summary:
+    temperature: 0.3
+    max_tokens: 2048
+  deep_research:
+    temperature: 0.3
+    max_tokens: 4096

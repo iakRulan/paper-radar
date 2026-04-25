@@ -1,0 +1,36 @@
+# 研究主题与关键词配置
+# 按需调整关键词和类别
+
+keywords:
+  - federated learning
+  - 3D Gaussian Splatting
+  - world model
+  - vision language action
+  - V2X cooperative perception
+  - multi-agent reinforcement learning
+  - diffusion policy
+  - event-triggered control
+  - distributed control
+  - embodied AI
+  - neural radiance field
+  - robotic manipulation
+  - cooperative perception
+  - fleet learning
+  - digital twin
+
+categories:
+  - cs.RO   # Robotics
+  - cs.CV   # Computer Vision
+  - cs.LG   # Machine Learning
+  - cs.MA   # Multi-Agent Systems
+  - cs.AI   # Artificial Intelligence
+  - cs.CL   # Computation and Language
+  - cs.SY   # Systems and Control
+  - eess.SY # Systems and Control Engineering
+
+# 筛选配置
+filter:
+  score_threshold: 6          # LLM 相关性打分阈值 (0-10)
+  max_papers_per_day: 10      # 每天最多输出论文数
+  days_lookback: 1            # 回溯天数
+  max_per_query: 50           # 每个查询最大结果数
